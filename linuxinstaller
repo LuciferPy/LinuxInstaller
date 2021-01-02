@@ -1,0 +1,94 @@
+red='\033[1;31m'
+yellow='\033[1;33m'
+blue='\033[1;34m'
+reset='\033[0m'
+clear
+printf $red
+figlet Linux Installer
+printf $reset
+echo " "
+printf $blue
+echo "Author		:	LuciferPy"
+echo "Mail		:	luciferpy60@gmail.com"
+echo "Github		:	github.com/LuciferPy"
+echo "Thanks for using"
+printf $reset
+echo ' '
+printf $yellow
+echo "Choice -:"
+echo "		1. Kali"
+echo "		2. Ubuntu"
+echo "		3. Kali-Nethunter"
+echo "		4. Debian"
+echo " "
+read -p $"Install No :" num
+if [ $num == 1 ]; then
+clear
+printf $red
+figlet Kali
+printf $reset
+printf $blue
+echo "[*] This script will install Kali"
+echo " "
+echo "[!] File size	:	about 60mb"
+echo " "
+read -p "Just Enter to Continue..." enter
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+clear
+echo "Install Complete.!"
+echo "Just type './start-kali.sh' for Kali"
+echo ' '
+printf $reset
+elif [ $num == 2 ]; then
+printf $red
+clear
+figlet Ubuntu
+printf $reset
+printf $blue
+echo '[*] This script will install Ubuntu'
+echo ' '
+echo '[!] File size	:	about 50mb'
+echo ' '
+read -p "Just Enter to continue..." a
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
+clear
+printf $blue
+echo 'Install complete.!'
+echo "Just type './start-ubuntu.sh' for Ubuntu"
+echo ' '
+printf $reset
+elif [ $num == 3 ]; then
+clear
+figlet Nethunter
+printf $blue
+echo "[*] This script will install Kali-Nethunter"
+echo ' '
+echo "[!] File size	:	(about) 2GB"
+echo ' '
+read -p "Just Enter to continue...." b
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Nethunter/nethunter.sh && bash nethunter.sh
+clear
+echo 'Install Complete.!'
+echo "Just type './start-kalinethunter' for Nethunter"
+echo ' '
+printf $reset
+elif [ $num == 4 ]; then
+clear
+printf $red
+figlet Debian
+printf $reset
+printf $blue
+echo "[*] This script will install Debian"
+echo " "
+echo "[!] File size	:	(about)??"
+echo " "
+read -p "Just enter to continue..." c
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Debian/debian.sh && bash debian.sh
+clear
+echo "Install complete.!"
+echo "Just type './start-debian.sh' for Debian"
+else
+printf $blue
+echo "Invaild Input"
+printf $reset
+fi
