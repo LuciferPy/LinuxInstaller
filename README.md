@@ -1,4 +1,4 @@
-Linux Installer <br>
+<h1> Linux Installer </h1><br>
 #This is a sample tool for install Linux in termux
 #The Commands are from Anlinux
 #LinuxInstaller
