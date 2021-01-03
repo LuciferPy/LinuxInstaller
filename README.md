@@ -2,7 +2,7 @@
 #This is a sample tool for install Linux in termux
 #The Commands are from Anlinux
 #LinuxInstaller
-Installion
+<h3>Installion</h3>
 $ pkg update
 $ pkg upgrade
 $ pkg install git
